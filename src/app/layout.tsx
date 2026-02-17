@@ -16,6 +16,8 @@ const manrope = Manrope({
     weight: ["300", "400", "500", "600"],
 });
 
+import EntranceAnimation from "@/components/EntranceAnimation";
+
 export const metadata: Metadata = {
     title: "Vitara Trailers | Liberdade Compacta, Aventura Gigante",
     description: "Descubra a liberdade com os Mini Trailers Vitara. Design retrô-moderno, conforto e aventura para suas viagens.",
@@ -29,6 +31,7 @@ export default function RootLayout({
     return (
         <html lang="pt-BR">
             <body className={`${manrope.variable} ${outfit.variable} font-sans bg-surface text-dark`}>
+                <EntranceAnimation />
                 {children}
             </body>
         </html>
