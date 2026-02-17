@@ -24,7 +24,7 @@ export default function Hero() {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                 >
                     <span className="inline-block py-1 px-3 rounded-full bg-secondary/20 text-secondary border border-secondary/30 text-xs font-bold uppercase tracking-widest mb-6 backdrop-blur-sm">
-                        Edição 2024
+                        Produção Nacional
                     </span>
 
                     <h1 className="font-display font-extrabold text-5xl md:text-7xl lg:text-8xl text-white mb-6 leading-tight drop-shadow-lg">

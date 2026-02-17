@@ -11,7 +11,7 @@ export default function Header() {
 
     useEffect(() => {
         const handleScroll = () => {
-            setIsScrolled(window.scrollY > 50);
+            setIsScrolled(window.scrollY > window.innerHeight - 100);
         };
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
@@ -19,23 +19,29 @@ export default function Header() {
 
     const navLinks = [
         { name: "Modelos", href: "#models" },
-        { name: "Recursos", href: "#features" },
-        { name: "Configurador", href: "#configurator" },
+        { name: "Galeria", href: "#gallery" },
+        { name: "Quem somos", href: "#about" },
     ];
 
     return (
         <nav
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-                    ? "bg-primary/80 backdrop-blur-md py-4 shadow-lg"
-                    : "bg-transparent py-6"
+                ? "bg-gradient-to-b from-primary to-transparent backdrop-blur-md py-2 shadow-lg"
+                : "bg-transparent py-4"
                 }`}
         >
             <div className="container mx-auto px-6 flex items-center justify-between">
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-2 group">
-                    <span className="font-display text-2xl font-extrabold text-surface tracking-tighter group-hover:text-secondary transition-colors">
-                        VITARA
-                    </span>
+                    {/* Using the logo image directly. CSS filter can be added if needed for white text on dark bg contexts, 
+                         but for now using the provided green logo. */}
+                    <div className="relative w-40 h-20">
+                        <img
+                            src="/images/LogosSemFundo.png"
+                            alt="Vitara Trailers"
+                            className="object-contain w-full h-full"
+                        />
+                    </div>
                 </Link>
 
                 {/* Desktop Navigation */}
