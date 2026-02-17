@@ -23,7 +23,7 @@ export default function EntranceAnimation() {
         // Cleanup
         const timeout = setTimeout(() => {
             setIsLoading(false);
-        }, 2200); // Wait a bit after 100% to slide up
+        }, 1500); // Wait a bit after 100% to slide up
 
         return () => {
             clearInterval(interval);
@@ -40,7 +40,7 @@ export default function EntranceAnimation() {
                     exit={{
                         opacity: 0,
                         transition: {
-                            duration: 0.8,
+                            duration: 0.5,
                             ease: "easeInOut"
                         }
                     }}

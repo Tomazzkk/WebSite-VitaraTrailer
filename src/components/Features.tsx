@@ -2,6 +2,7 @@
 
 import { ShieldCheck, Zap, Map } from "lucide-react";
 import { motion } from "framer-motion";
+import { SimpleTiltCard } from "./TiltCard";
 
 export default function Features() {
     const features = [
@@ -40,24 +41,25 @@ export default function Features() {
 
                 <div className="grid md:grid-cols-3 gap-8">
                     {features.map((feature, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.1 }}
-                            className="bg-white p-10 rounded-[2rem] shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 border border-gray-100 group hover:-translate-y-2"
-                        >
-                            <div className="mb-8 w-16 h-16 rounded-2xl bg-primary/5 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all duration-300">
-                                {feature.icon}
-                            </div>
-                            <h3 className="font-display text-2xl font-bold text-dark mb-4 group-hover:text-primary transition-colors">
-                                {feature.title}
-                            </h3>
-                            <p className="font-sans text-gray-500 leading-relaxed">
-                                {feature.description}
-                            </p>
-                        </motion.div>
+                        <SimpleTiltCard key={index} className="h-full">
+                            <motion.div
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: index * 0.1 }}
+                                className="bg-white p-10 rounded-[2rem] shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 border border-gray-100 group hover:-translate-y-2 h-full"
+                            >
+                                <div className="mb-8 w-16 h-16 rounded-2xl bg-primary/5 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all duration-300" style={{ transform: "translateZ(20px)" }}>
+                                    {feature.icon}
+                                </div>
+                                <h3 className="font-display text-2xl font-bold text-dark mb-4 group-hover:text-primary transition-colors" style={{ transform: "translateZ(10px)" }}>
+                                    {feature.title}
+                                </h3>
+                                <p className="font-sans text-gray-500 leading-relaxed">
+                                    {feature.description}
+                                </p>
+                            </motion.div>
+                        </SimpleTiltCard>
                     ))}
                 </div>
             </div>
