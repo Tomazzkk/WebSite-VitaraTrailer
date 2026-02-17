@@ -1,18 +1,18 @@
 import type { Metadata } from "next";
-import { Inter, Montserrat } from "next/font/google"; // Import only requested fonts
+import { Manrope, Outfit } from "next/font/google"; // Import 2026-ready fonts
 import "./globals.css";
 
-// Configure Montserrat for titles (Weights: 400, 700, 800)
-const montserrat = Montserrat({
+// Configure Outfit for titles (Weights: 400, 700, 800) - Modern, geometric
+const outfit = Outfit({
     subsets: ["latin"],
-    variable: "--font-montserrat",
+    variable: "--font-outfit",
     weight: ["400", "700", "800"],
 });
 
-// Configure Inter for body text (Weights: 300, 400, 500, 600)
-const inter = Inter({
+// Configure Manrope for body text (Weights: 300, 400, 500, 600) - Clean, legible
+const manrope = Manrope({
     subsets: ["latin"],
-    variable: "--font-inter",
+    variable: "--font-manrope",
     weight: ["300", "400", "500", "600"],
 });
 
@@ -28,7 +28,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="pt-BR">
-            <body className={`${inter.variable} ${montserrat.variable} font-sans bg-surface text-dark`}>
+            <body className={`${manrope.variable} ${outfit.variable} font-sans bg-surface text-dark`}>
                 {children}
             </body>
         </html>

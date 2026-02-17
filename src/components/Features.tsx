@@ -6,57 +6,64 @@ import { motion } from "framer-motion";
 export default function Features() {
     const features = [
         {
-            icon: <ShieldCheck size={48} className="text-secondary" />,
+            icon: <ShieldCheck size={40} className="text-secondary" />,
             title: "Eixos AL-KO",
             description: "Segurança e estabilidade incomparáveis com a melhor tecnologia de suspensão alemã do mercado.",
         },
         {
-            icon: <Zap size={48} className="text-secondary" />,
+            icon: <Zap size={40} className="text-secondary" />,
             title: "Pronto para a Estrada",
             description: "Homologado e emplacado. Engate no seu carro e saia para a aventura sem burocracia.",
         },
         {
-            icon: <Map size={48} className="text-secondary" />,
+            icon: <Map size={40} className="text-secondary" />,
             title: "Isolamento Térmico",
             description: "Conforto em qualquer clima. Paredes com isolamento premium para noites tranquilas no frio ou calor.",
         },
     ];
 
     return (
-        <section id="features" className="py-24 bg-surface relative overflow-hidden">
-            {/* Subtle background forest pattern or texture could go here */}
-
-            <div className="container mx-auto px-6">
-                <div className="text-center mb-16">
-                    <h2 className="font-display text-4xl font-bold text-primary mb-4">
-                        Por que escolher a Vitara?
-                    </h2>
-                    <div className="w-24 h-1 bg-secondary mx-auto rounded-full" />
+        <section id="features" className="py-32 bg-surface relative overflow-hidden">
+            <div className="container mx-auto px-6 relative z-10">
+                <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+                    <div>
+                        <span className="text-secondary font-bold tracking-widest uppercase text-sm mb-4 block">Por que Vitara?</span>
+                        <h2 className="font-display text-5xl md:text-6xl font-bold text-primary leading-tight">
+                            Engenharia alemã,<br />
+                            <span className="text-dark/80">Alma brasileira.</span>
+                        </h2>
+                    </div>
+                    <p className="text-gray-600 text-lg leading-relaxed max-w-xl">
+                        Cada detalhe do Vitara é pensado para oferecer a máxima performance off-road sem abrir mão do conforto que você merece após um longo dia de aventura.
+                    </p>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-12">
+                <div className="grid md:grid-cols-3 gap-8">
                     {features.map((feature, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ delay: index * 0.2 }}
-                            className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100 flex flex-col items-center text-center group"
+                            transition={{ delay: index * 0.1 }}
+                            className="bg-white p-10 rounded-[2rem] shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 border border-gray-100 group hover:-translate-y-2"
                         >
-                            <div className="mb-6 p-4 bg-primary/5 rounded-full group-hover:bg-primary/10 transition-colors duration-300">
+                            <div className="mb-8 w-16 h-16 rounded-2xl bg-primary/5 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all duration-300">
                                 {feature.icon}
                             </div>
-                            <h3 className="font-display text-2xl font-bold text-dark mb-4">
+                            <h3 className="font-display text-2xl font-bold text-dark mb-4 group-hover:text-primary transition-colors">
                                 {feature.title}
                             </h3>
-                            <p className="font-sans text-gray-600 leading-relaxed">
+                            <p className="font-sans text-gray-500 leading-relaxed">
                                 {feature.description}
                             </p>
                         </motion.div>
                     ))}
                 </div>
             </div>
+
+            {/* Decorative background elements */}
+            <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-gray-100/50 to-transparent -z-0" />
         </section>
     );
 }

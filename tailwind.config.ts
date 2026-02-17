@@ -16,8 +16,8 @@ const config: Config = {
                 "dark-accent": "#1B3617", // Dark Accent
             },
             fontFamily: {
-                sans: ['var(--font-inter)'],
-                display: ['var(--font-montserrat)'],
+                sans: ['var(--font-manrope)'],
+                display: ['var(--font-outfit)'],
             },
             backgroundImage: {
                 "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

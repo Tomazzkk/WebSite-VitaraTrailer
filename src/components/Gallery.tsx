@@ -4,73 +4,68 @@ import { motion } from "framer-motion";
 
 const galleryImages = [
     {
-        src: "https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?q=80&w=2670&auto=format&fit=crop",
-        alt: "Vitara Trailer em acampamento na montanha"
+        src: "/images/gallery/LateralDois.png",
+        alt: "Design Lateral Aerodinâmico"
     },
     {
-        src: "https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?q=80&w=2670&auto=format&fit=crop",
-        alt: "Interior do Vitara Trailer"
+        src: "/images/gallery/Cozinha.jpeg",
+        alt: "Cozinha Completa e Equipada"
     },
     {
-        src: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?q=80&w=2670&auto=format&fit=crop",
-        alt: "Vitara Trailer na praia"
+        src: "/images/gallery/Acabamento.jpg",
+        alt: "Acabamento Premium em Madeira"
     },
     {
-        src: "https://images.unsplash.com/photo-1496947855313-babef92d098b?q=80&w=2671&auto=format&fit=crop",
-        alt: "Detalhes do acabamento"
+        src: "/images/gallery/LateralPreto.png",
+        alt: "Edição Black Off-Road"
     },
     {
-        src: "https://images.unsplash.com/photo-1533873984035-25970ab07461?q=80&w=2674&auto=format&fit=crop",
-        alt: "Cozinha externa"
-    },
-    {
-        src: "https://images.unsplash.com/photo-1494548162494-384bba4ab999?q=80&w=2680&auto=format&fit=crop",
-        alt: "Vista noturna"
+        src: "/images/gallery/LateralMenor.png",
+        alt: "Compacto e Robusto"
     }
 ];
 
 export default function Gallery() {
     return (
-        <section id="gallery" className="py-24 bg-surface relative overflow-hidden">
-            <div className="container mx-auto px-6">
-                <div className="text-center mb-16">
-                    <motion.h2
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="font-display text-4xl md:text-5xl font-bold text-primary mb-4"
-                    >
-                        Conheça nossos Trailers
-                    </motion.h2>
-                    <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.1 }}
-                        className="text-gray-600 max-w-2xl mx-auto"
-                    >
-                        Explore cada detalhe do design robusto e elegante que faz do Vitara a escolha perfeita para sua próxima aventura.
-                    </motion.p>
+        <section id="gallery" className="py-32 bg-surface relative overflow-hidden">
+            <div className="container mx-auto px-6 relative z-10">
+                <div className="flex flex-col md:flex-row items-end justify-between mb-20 gap-8">
+                    <div className="max-w-xl">
+                        <span className="text-secondary font-bold tracking-widest uppercase text-sm mb-4 block">Showroom</span>
+                        <h2 className="font-display text-5xl md:text-6xl font-bold text-primary mb-6 leading-tight">
+                            Nossos <br />
+                            <span className="text-dark">Mini-trailers.</span>
+                        </h2>
+                    </div>
+                    <p className="text-gray-600 text-lg max-w-md text-right font-medium">
+                        Conheça de perto a qualidade, o design e os detalhes que fazem do Vitara a sua melhor companhia de viagem.
+                    </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px]">
                     {galleryImages.map((image, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
-                            transition={{ delay: index * 0.1 }}
-                            whileHover={{ y: -5 }}
-                            className="relative aspect-[4/3] rounded-2xl overflow-hidden group shadow-lg"
+                            transition={{ delay: index * 0.1, duration: 0.6 }}
+                            className={`relative rounded-[2rem] overflow-hidden group ${index === 0 || index === 3 ? 'md:col-span-2' : ''
+                                } ${index === 3 ? 'md:row-span-2 md:h-full' : ''}`}
                         >
-                            {/* Standard img tag for now to simplify external image handling */}
+                            {/* Standard img tag for now */}
                             <img
                                 src={image.src}
                                 alt={image.alt}
-                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                             />
-                            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300" />
+
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-60 transition-opacity duration-300" />
+
+                            <div className="absolute bottom-0 left-0 p-8 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                                <span className="text-white/80 text-sm font-bold uppercase tracking-wider mb-2 block">Vitara Moments</span>
+                                <p className="text-white text-xl font-display font-bold">{image.alt}</p>
+                            </div>
                         </motion.div>
                     ))}
                 </div>
