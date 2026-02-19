@@ -3,8 +3,45 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import CountUp from "./CountUp";
+import LightRays from "./LightRays";
+import BlurText from "./ui/BlurText";
+import ShinyText from "./ui/ShinyText";
+import { TextAnimate } from "./ui/text-animate";
+
+
 
 export default function Hero() {
+    const [lightRaysProps, setLightRaysProps] = useState({
+        rayLength: 5,
+        lightSpread: 1.1,
+    });
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth < 768) {
+                // Mobile/Tablet visualization adjustments
+                setLightRaysProps({
+                    rayLength: 8,
+                    lightSpread: 2,
+                });
+            } else {
+                // Desktop visualization (standard)
+                setLightRaysProps({
+                    rayLength: 5,
+                    lightSpread: 1.1,
+                });
+            }
+        };
+
+        // Initial check
+        handleResize();
+
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
     return (
         <section className="relative h-screen w-full flex items-center justify-center overflow-hidden absolute inset-0 z-0">
             {/* Background Image/Gradient */}
@@ -18,6 +55,24 @@ export default function Hero() {
                 />
             </div>
 
+            {/* LightRays Overlay */}
+            <div className="absolute inset-0 z-10 pointer-events-none mix-blend-screen opacity-100 md:opacity-70">
+                <LightRays
+                    raysOrigin="top-center"
+                    raysColor="#ffffff"
+                    raysSpeed={3.2}
+                    rayLength={lightRaysProps.rayLength}
+                    lightSpread={lightRaysProps.lightSpread}
+                    pulsating={false}
+                    fadeDistance={1}
+                    saturation={1}
+                    followMouse={false}
+                    mouseInfluence={0.45}
+                    noiseAmount={0.05}
+                    distortion={0}
+                />
+            </div>
+
             <div className="container mx-auto px-6 relative z-20">
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
@@ -27,18 +82,50 @@ export default function Hero() {
                 >
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white/90 text-sm font-medium tracking-wide mb-8">
                         <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
-                        Produção 100% Nacional
+                        <div>
+                            <ShinyText text="Produção" disabled={false} speed={3} color="rgba(255, 255, 255, 0.6)" shineColor="#ffffff" className="inline-block" />
+                            <CountUp
+                                to={100}
+                                from={98}
+                                suffix="%"
+                                duration={0.2}
+                                className="font-bold mx-1"
+                            />
+                            <ShinyText text="Nacional" disabled={false} speed={3} color="rgba(255, 255, 255, 0.6)" shineColor="#ffffff" className="inline-block" />
+                        </div>
                     </div>
 
                     <h1 className="font-display font-bold text-6xl md:text-8xl lg:text-9xl text-white mb-8 leading-[0.9] tracking-tight">
-                        Liberdade <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-white">Compacta.</span>
+                        <BlurText
+                            text="Liberdade"
+                            className="block"
+                            delay={200}
+                            direction="top"
+                            animateOnMount={true}
+                            startDelay={1500}
+                        />
+                        <BlurText
+                            text="Compacta."
+                            className="block"
+                            childClassName="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-white"
+                            delay={400}
+                            direction="top"
+                            animateOnMount={true}
+                            startDelay={1500}
+                        />
                     </h1>
 
-                    <p className="font-sans text-xl md:text-2xl text-gray-200 max-w-xl mb-12 leading-relaxed font-light opacity-90">
-                        Redescubra o prazer de viajar com os Mini Trailers Vitara.
-                        Design icônico, conforto premium e a robustez que sua jornada exige.
-                    </p>
+                    <TextAnimate
+                        animation="blurInUp"
+                        by="word"
+                        duration={0.4}
+                        delay={0}
+                        once={true}
+                        as="p"
+                        className="font-sans text-xl md:text-2xl text-gray-200 max-w-xl mb-12 leading-relaxed font-light opacity-90"
+                    >
+                        Redescubra o prazer de viajar com os Mini Trailers Vitara. Design icônico, conforto premium e a robustez que sua jornada exige.
+                    </TextAnimate>
 
                     <motion.div
                         whileHover={{ scale: 1.02 }}

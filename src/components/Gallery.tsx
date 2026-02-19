@@ -10,7 +10,7 @@ const galleryImages = [
     },
     {
         src: "/images/gallery/LateralPreto.png",
-        alt: "Edição Black Off-Road",
+        alt: "Edição Black",
         position: "50% 85%" // Centralizado
     },
     {
