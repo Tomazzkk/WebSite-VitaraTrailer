@@ -88,27 +88,27 @@ const BlurText = ({
 
     const stepCount = toSnapshots.length + 1;
     const totalDuration = stepDuration * (stepCount - 1);
-    const times = Array.from({ length: stepCount }, (_, i) => (stepCount === 1 ? 0 : i / (stepCount - 1)));
+    const times = useMemo(() => Array.from({ length: stepCount }, (_, i) => (stepCount === 1 ? 0 : i / (stepCount - 1))), [stepCount]);
+
+    const animateKeyframes = useMemo(() => buildKeyframes(fromSnapshot, toSnapshots), [fromSnapshot, toSnapshots]);
 
     return (
         <span ref={ref} className={`inline-flex flex-wrap ${className}`}>
             {elements.map((segment, index) => {
-                const animateKeyframes = buildKeyframes(fromSnapshot, toSnapshots);
-
-                const spanTransition: any = {
-                    duration: totalDuration,
-                    times,
-                    delay: animationDelay + (index * delay) / 1000,
-                };
-                spanTransition.ease = easing;
+                const animateValue = inView ? animateKeyframes : fromSnapshot;
 
                 return (
                     <motion.span
                         className={`inline-block ${elementsClassName}`}
                         key={index}
                         initial={fromSnapshot}
-                        animate={inView ? animateKeyframes : fromSnapshot}
-                        transition={spanTransition}
+                        animate={animateValue}
+                        transition={{
+                            duration: totalDuration,
+                            times,
+                            delay: animationDelay + (index * delay) / 1000,
+                            ease: easing
+                        }}
                         onAnimationComplete={index === elements.length - 1 ? onAnimationComplete : undefined}
                     >
                         {segment === ' ' ? '\u00A0' : segment}

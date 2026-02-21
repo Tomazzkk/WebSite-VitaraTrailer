@@ -87,6 +87,11 @@ export default function Hero() {
                             delay={150}
                             animationDelay={1.2} // Inicia logo após o BlurText de cima engatar
                             elementsClassName="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-white"
+                            animationFrom={{ opacity: 0, y: 50 }}
+                            animationTo={[
+                                { opacity: 0.5, y: -5 },
+                                { opacity: 1, y: 0 },
+                            ]}
                         />
                     </h1>
 
