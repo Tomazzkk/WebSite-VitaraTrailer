@@ -109,7 +109,7 @@ export default function About() {
                                 <span className="text-primary">desbravar.</span>
                             </h2>
 
-                            <div className="space-y-6 text-lg text-gray-500 font-sans leading-relaxed mb-10">
+                            <div className="space-y-6 text-lg text-dark-accent/70 font-sans leading-relaxed mb-10">
                                 <p>
                                     A <strong className="text-dark">Vitara Trailers</strong> não é apenas uma fábrica, é um manifesto de liberdade. Nascemos da necessidade de ir além, de criar veículos que não apenas chegam ao destino, mas tornam a jornada inesquecível.
                                 </p>
@@ -121,11 +121,11 @@ export default function About() {
                             <div className="grid grid-cols-2 gap-8 mb-10">
                                 <div>
                                     <h4 className="font-display text-4xl font-bold text-dark mb-1">100%</h4>
-                                    <p className="text-sm text-gray-400 uppercase tracking-wider font-bold">Produção Nacional</p>
+                                    <p className="text-sm text-dark-accent/60 uppercase tracking-wider font-bold">Produção Nacional</p>
                                 </div>
                                 <div>
                                     <h4 className="font-display text-4xl font-bold text-dark mb-1">+80</h4>
-                                    <p className="text-sm text-gray-400 uppercase tracking-wider font-bold">Produtos Entregues</p>
+                                    <p className="text-sm text-dark-accent/60 uppercase tracking-wider font-bold">Produtos Entregues</p>
                                 </div>
                             </div>
 
@@ -183,7 +183,7 @@ export default function About() {
                             className="relative z-20 bg-white p-8 md:absolute md:bottom-8 md:left-12 md:bg-white/90 md:backdrop-blur-xl md:rounded-3xl md:shadow-xl md:border md:border-white/50 md:max-w-md w-full"
                         >
                             <h3 className="font-display text-2xl font-bold text-dark mb-4">Venha nos visitar</h3>
-                            <p className="text-gray-600 mb-6 leading-relaxed">
+                            <p className="text-dark-accent/80 mb-6 leading-relaxed">
                                 Agende uma visita para conhecer nossa linha de produção e ver de perto a qualidade do seu futuro Vitara.
                             </p>
                             <div className="flex items-start gap-4 mb-2">
@@ -192,7 +192,7 @@ export default function About() {
                                 </div>
                                 <div>
                                     <strong className="block text-dark text-lg mb-1">Vitara Trailers</strong>
-                                    <span className="text-gray-500">Rua Osni Pereira - Medeiros<br />Barra Velha - SC, 89390-000</span>
+                                    <span className="text-dark-accent/70">Rua Osni Pereira - Medeiros<br />Barra Velha - SC, 89390-000</span>
                                 </div>
                             </div>
                         </motion.div>

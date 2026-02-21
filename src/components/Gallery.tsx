@@ -42,7 +42,7 @@ export default function Gallery() {
                             <span className="text-dark">Mini-trailers.</span>
                         </h2>
                     </div>
-                    <p className="text-gray-600 text-lg max-w-md text-left md:text-right font-medium">
+                    <p className="text-dark-accent/80 text-lg max-w-md text-left md:text-right font-medium">
                         Conheça de perto a qualidade, o design e os detalhes que fazem do Vitara a sua melhor companhia de viagem.
                     </p>
                 </div>

@@ -44,7 +44,7 @@ export default function Showroom() {
                         Escolha sua <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">companhia de viagem.</span>
                     </h2>
-                    <p className="font-sans text-gray-600 text-lg leading-relaxed">
+                    <p className="font-sans text-dark-accent/80 text-lg leading-relaxed">
                         Projetados para quem não abre mão de conforto, mesmo nos lugares mais remotos.
                         Design aerodinâmico, leveza e durabilidade.
                     </p>
@@ -93,10 +93,10 @@ export default function Showroom() {
                                         <h3 className="font-display text-3xl font-bold text-dark mb-1">
                                             {product.name}
                                         </h3>
-                                        <p className="text-gray-400 text-sm font-medium">Modelo 2026</p>
+                                        <p className="text-dark-accent/60 text-sm font-medium">Modelo 2026</p>
                                     </div>
                                     <div className="text-right">
-                                        <span className="text-xs text-gray-500 font-bold uppercase tracking-wide block mb-1">A partir de</span>
+                                        <span className="text-xs text-dark-accent/70 font-bold uppercase tracking-wide block mb-1">A partir de</span>
                                         <span className="font-display text-2xl font-bold text-secondary">{product.price}</span>
                                     </div>
                                 </div>
@@ -108,7 +108,7 @@ export default function Showroom() {
                                                 {spec.icon}
                                             </div>
                                             <span className="block font-bold text-dark text-sm mb-1">{spec.label}</span>
-                                            <span className="block text-[10px] text-gray-400 uppercase tracking-wide">{spec.text}</span>
+                                            <span className="block text-[10px] text-dark-accent/60 uppercase tracking-wide">{spec.text}</span>
                                         </div>
                                     ))}
                                 </div>

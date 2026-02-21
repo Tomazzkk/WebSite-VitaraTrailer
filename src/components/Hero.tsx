@@ -35,7 +35,7 @@ export default function Hero() {
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-white">Compacta.</span>
                     </h1>
 
-                    <p className="font-sans text-xl md:text-2xl text-gray-200 max-w-xl mb-12 leading-relaxed font-light opacity-90">
+                    <p className="font-sans text-xl md:text-2xl text-surface/90 max-w-xl mb-12 leading-relaxed font-light opacity-90">
                         Redescubra o prazer de viajar com os Mini Trailers Vitara.
                         Design icônico, conforto premium e a robustez que sua jornada exige.
                     </p>

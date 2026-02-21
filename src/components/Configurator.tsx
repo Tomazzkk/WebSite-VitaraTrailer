@@ -81,8 +81,8 @@ export default function Configurator() {
                                         key={model.id}
                                         onClick={() => setSelectedModel(model)}
                                         className={`cursor-pointer rounded-2xl p-6 border-2 transition-all duration-300 relative overflow-hidden ${selectedModel.id === model.id
-                                                ? "border-secondary bg-white/10"
-                                                : "border-white/10 hover:border-white/30 bg-transparent"
+                                            ? "border-secondary bg-white/10"
+                                            : "border-white/10 hover:border-white/30 bg-transparent"
                                             }`}
                                     >
                                         {selectedModel.id === model.id && (
@@ -112,8 +112,8 @@ export default function Configurator() {
                                         key={item.id}
                                         onClick={() => toggleAccessory(item.id)}
                                         className={`cursor-pointer rounded-xl p-4 border transition-all duration-200 flex items-center justify-between ${selectedAccessories.includes(item.id)
-                                                ? "border-secondary bg-secondary/10"
-                                                : "border-white/10 hover:bg-white/5"
+                                            ? "border-secondary bg-secondary/10"
+                                            : "border-white/10 hover:bg-white/5"
                                             }`}
                                     >
                                         <div className="flex items-center gap-3">
@@ -145,7 +145,7 @@ export default function Configurator() {
                                 </div>
 
                                 {selectedAccessories.length > 0 && (
-                                    <div className="text-sm text-gray-500 space-y-2 pt-2">
+                                    <div className="text-sm text-dark-accent/70 space-y-2 pt-2">
                                         {selectedAccessories.map(id => {
                                             const item = accessories.find(a => a.id === id);
                                             return item ? (
@@ -161,12 +161,12 @@ export default function Configurator() {
 
                             <div className="border-t-2 border-dashed border-gray-300 my-6 pt-4">
                                 <div className="flex justify-between items-end">
-                                    <span className="text-gray-500 font-bold">Total Estimado</span>
+                                    <span className="text-dark-accent/70 font-bold">Total Estimado</span>
                                     <span className="text-3xl font-display font-extrabold text-primary">
                                         R$ {totalPrice.toLocaleString("pt-BR")}
                                     </span>
                                 </div>
-                                <p className="text-xs text-gray-400 mt-2 text-right">
+                                <p className="text-xs text-dark-accent/60 mt-2 text-right">
                                     *Valor sujeito a alteração. Frete não incluso.
                                 </p>
                             </div>

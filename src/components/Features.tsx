@@ -34,7 +34,7 @@ export default function Features() {
                             <span className="text-dark/80">Alma brasileira.</span>
                         </h2>
                     </div>
-                    <p className="text-gray-600 text-lg leading-relaxed max-w-xl">
+                    <p className="text-dark-accent/80 text-lg leading-relaxed max-w-xl">
                         Cada detalhe do Vitara é pensado para oferecer a máxima performance off-road sem abrir mão do conforto que você merece após um longo dia de aventura.
                     </p>
                 </div>
@@ -55,7 +55,7 @@ export default function Features() {
                                 <h3 className="font-display text-2xl font-bold text-dark mb-4 group-hover:text-primary transition-colors" style={{ transform: "translateZ(10px)" }}>
                                     {feature.title}
                                 </h3>
-                                <p className="font-sans text-gray-500 leading-relaxed">
+                                <p className="font-sans text-dark-accent/70 leading-relaxed">
                                     {feature.description}
                                 </p>
                             </motion.div>

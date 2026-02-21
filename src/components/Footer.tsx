@@ -10,7 +10,7 @@ export default function Footer() {
                     {/* Brand Column */}
                     <div>
                         <h3 className="font-display text-2xl font-bold mb-6">VITARA TRAILERS</h3>
-                        <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                        <p className="text-surface/80 text-sm leading-relaxed mb-6">
                             Liberdade para ir mais longe. Trailers compactos, robustos e projetados para a sua aventura.
                         </p>
                         <div className="flex gap-4">
@@ -26,7 +26,7 @@ export default function Footer() {
                     {/* Quick Links */}
                     <div>
                         <h4 className="font-display text-lg font-bold mb-6">Explorar</h4>
-                        <ul className="space-y-4 text-sm text-gray-400">
+                        <ul className="space-y-4 text-sm text-surface/80">
                             <li><Link href="#" className="hover:text-secondary transition-colors">Nossa História</Link></li>
                             <li><Link href="#models" className="hover:text-secondary transition-colors">Modelos</Link></li>
                             <li><Link href="#features" className="hover:text-secondary transition-colors">Diferenciais</Link></li>
@@ -37,7 +37,7 @@ export default function Footer() {
                     {/* Models */}
                     <div>
                         <h4 className="font-display text-lg font-bold mb-6">Modelos</h4>
-                        <ul className="space-y-4 text-sm text-gray-400">
+                        <ul className="space-y-4 text-sm text-surface/80">
                             <li><Link href="#" className="hover:text-secondary transition-colors">Vitara Classic</Link></li>
                             <li><Link href="#" className="hover:text-secondary transition-colors">Vitara Off-Road</Link></li>
                             <li><Link href="#" className="hover:text-secondary transition-colors">Edição Especial</Link></li>
@@ -47,7 +47,7 @@ export default function Footer() {
                     {/* Contact */}
                     <div>
                         <h4 className="font-display text-lg font-bold mb-6">Contato</h4>
-                        <ul className="space-y-4 text-sm text-gray-400">
+                        <ul className="space-y-4 text-sm text-surface/80">
                             <li className="flex items-start gap-3">
                                 <MapPin size={18} className="text-secondary shrink-0 mt-0.5" />
                                 <span>Rua da Aventura, 123<br />São Paulo - SP</span>
@@ -65,8 +65,8 @@ export default function Footer() {
                 </div>
 
                 <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p className="text-xs text-gray-500">© 2026 Vitara Trailers. Todos os direitos reservados.</p>
-                    <div className="flex gap-6 text-xs text-gray-500">
+                    <p className="text-xs text-surface/70">© 2026 Vitara Trailers. Todos os direitos reservados.</p>
+                    <div className="flex gap-6 text-xs text-surface/70">
                         <Link href="#" className="hover:text-white transition-colors">Política de Privacidade</Link>
                         <Link href="#" className="hover:text-white transition-colors">Termos de Uso</Link>
                     </div>
