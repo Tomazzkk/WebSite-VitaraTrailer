@@ -3,7 +3,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
 import { useState, useEffect } from "react";
-import CountUp from "./CountUp";
 
 const carouselImages = [
     "/images/gallery/LateralDois.png",
@@ -121,15 +120,11 @@ export default function About() {
 
                             <div className="grid grid-cols-2 gap-8 mb-10">
                                 <div>
-                                    <h4 className="font-display text-4xl font-bold text-dark mb-1">
-                                        <CountUp to={100} from={98} suffix="%" duration={0.10} />
-                                    </h4>
+                                    <h4 className="font-display text-4xl font-bold text-dark mb-1">100%</h4>
                                     <p className="text-sm text-gray-400 uppercase tracking-wider font-bold">Produção Nacional</p>
                                 </div>
                                 <div>
-                                    <h4 className="font-display text-4xl font-bold text-dark mb-1">
-                                        <CountUp to={80} from={78} prefix="+" duration={0.10} />
-                                    </h4>
+                                    <h4 className="font-display text-4xl font-bold text-dark mb-1">+80</h4>
                                     <p className="text-sm text-gray-400 uppercase tracking-wider font-bold">Produtos Entregues</p>
                                 </div>
                             </div>

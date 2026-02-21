@@ -5,63 +5,32 @@ import { ArrowUpRight, Bed, Weight, Ruler } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { SimpleTiltCard } from "./TiltCard";
-import CountUp from "./CountUp";
 
-interface ProductSpec {
-    icon: JSX.Element;
-    value: number;
-    unit: string;
-    text: string;
-    decimals?: number;
-}
-
-interface Product {
-    id: string;
-    name: string;
-    price: number;
-    image: string;
-    specs: ProductSpec[];
-    tag: string;
-    imageStyle?: React.CSSProperties;
-}
-
-const products: Product[] = [
+const products = [
     {
         id: "family",
         name: "Vitara Família",
-        price: 45900,
+        price: "R$ 45.900",
         image: "/images/TrailerFamilia.png",
         specs: [
-            { icon: <Weight size={18} />, value: 750, unit: "kg", text: "Espaço otimizado" },
-            { icon: <Bed size={18} />, value: 4, unit: " Pessoas", text: "Família completa" },
-            { icon: <Ruler size={18} />, value: 4.0, unit: "m", decimals: 1, text: "Conforto máximo" },
+            { icon: <Weight size={18} />, label: "750kg", text: "Espaço otimizado" },
+            { icon: <Bed size={18} />, label: "4 Pessoas", text: "Família completa" },
+            { icon: <Ruler size={18} />, label: "4.0m", text: "Conforto máximo" },
         ],
         tag: "Para a Família",
     },
     {
         id: "classic",
         name: "Vitara Classic",
-        price: 35900,
+        price: "R$ 35.900",
         image: "/images/LateralPreto.png",
+
         specs: [
-            { icon: <Weight size={18} />, value: 480, unit: "kg", text: "Leve para rebocar" },
-            { icon: <Bed size={18} />, value: 2, unit: " Pessoas", text: "Ideal para Casais" },
-            { icon: <Ruler size={18} />, value: 3.2, unit: "m", decimals: 1, text: "Compacto e Ágil" },
+            { icon: <Weight size={18} />, label: "480kg", text: "Leve para rebocar" },
+            { icon: <Bed size={18} />, label: "2 Pessoas", text: "Ideal para Casais" },
+            { icon: <Ruler size={18} />, label: "3.2m", text: "Compacto e Ágil" },
         ],
         tag: "Mais Procurado",
-    },
-    {
-        id: "vitara-2700",
-        name: "Vitara 2700",
-        price: 52900,
-        image: "/images/Vitara2700.jpg",
-        specs: [
-            { icon: <Weight size={18} />, value: 900, unit: "kg", text: "Robusto e Estável" },
-            { icon: <Bed size={18} />, value: 4, unit: " Pessoas", text: "Família e Amigos" },
-            { icon: <Ruler size={18} />, value: 2.7, unit: "m", decimals: 1, text: "Espaço Interno" },
-        ],
-        tag: "Lançamento",
-        imageStyle: { backgroundPosition: "center 75%" }, // Adjust focus lower to show more of the trailer content
     },
 ];
 
@@ -101,7 +70,7 @@ export default function Showroom() {
                             className="group relative bg-white rounded-[2.5rem] overflow-hidden shadow-2xl shadow-gray-200/50 hover:shadow-3xl hover:shadow-primary/10 transition-all duration-500 h-full"
                         >
                             {/* Image Container - Increased height for better visibility */}
-                            <div className="relative h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden">
+                            <div className="relative h-[500px] overflow-hidden">
                                 <div className="absolute top-6 left-6 z-20">
                                     <span className="bg-white/90 backdrop-blur-md text-dark-accent px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg">
                                         {product.tag}
@@ -111,7 +80,7 @@ export default function Showroom() {
                                 {/* Use standard img for now */}
                                 <div
                                     className="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-110"
-                                    style={{ backgroundImage: `url(${product.image})`, transform: "translateZ(50px)", ...product.imageStyle }}
+                                    style={{ backgroundImage: `url(${product.image})`, transform: "translateZ(50px)" }}
                                 />
 
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
@@ -128,14 +97,7 @@ export default function Showroom() {
                                     </div>
                                     <div className="text-right">
                                         <span className="text-xs text-gray-500 font-bold uppercase tracking-wide block mb-1">A partir de</span>
-                                        <CountUp
-                                            to={product.price}
-                                            from={Math.round(product.price * 0.98)}
-                                            prefix="R$ "
-                                            separator="."
-                                            duration={0.2}
-                                            className="font-display text-2xl font-bold text-secondary"
-                                        />
+                                        <span className="font-display text-2xl font-bold text-secondary">{product.price}</span>
                                     </div>
                                 </div>
 
@@ -145,15 +107,7 @@ export default function Showroom() {
                                             <div className="flex justify-center mb-2 text-primary/60 group-hover:text-secondary transition-colors">
                                                 {spec.icon}
                                             </div>
-                                            <div className="block font-bold text-dark text-sm mb-1">
-                                                <CountUp
-                                                    to={spec.value}
-                                                    from={spec.value * 0.98}
-                                                    suffix={spec.unit}
-                                                    decimals={spec.decimals || 0}
-                                                    duration={0.2}
-                                                />
-                                            </div>
+                                            <span className="block font-bold text-dark text-sm mb-1">{spec.label}</span>
                                             <span className="block text-[10px] text-gray-400 uppercase tracking-wide">{spec.text}</span>
                                         </div>
                                     ))}

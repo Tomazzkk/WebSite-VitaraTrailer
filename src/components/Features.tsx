@@ -3,7 +3,6 @@
 import { ShieldCheck, Zap, Map } from "lucide-react";
 import { motion } from "framer-motion";
 import { SimpleTiltCard } from "./TiltCard";
-import ScrollReveal from "./ui/ScrollReveal";
 
 export default function Features() {
     const features = [
@@ -29,16 +28,10 @@ export default function Features() {
             <div className="container mx-auto px-6 relative z-10">
                 <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
                     <div>
-                        <ScrollReveal>
-                            <span className="text-secondary font-bold tracking-widest uppercase text-sm mb-4 block">Por que Vitara?</span>
-                        </ScrollReveal>
+                        <span className="text-secondary font-bold tracking-widest uppercase text-sm mb-4 block">Por que Vitara?</span>
                         <h2 className="font-display text-5xl md:text-6xl font-bold text-primary leading-tight">
-                            <ScrollReveal delay={0.3}>
-                                Engenharia alemã,<br />
-                            </ScrollReveal>
-                            <ScrollReveal delay={0.4}>
-                                <span className="text-dark/80">Alma brasileira.</span>
-                            </ScrollReveal>
+                            Engenharia alemã,<br />
+                            <span className="text-dark/80">Alma brasileira.</span>
                         </h2>
                     </div>
                     <p className="text-gray-600 text-lg leading-relaxed max-w-xl">

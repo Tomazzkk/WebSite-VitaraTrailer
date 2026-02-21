@@ -16,11 +16,22 @@
   }
 }
 
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
+<<<<<<< HEAD
 
 @layer base {
   :root {
@@ -94,3 +105,5 @@
     --chart-5: 340 75% 55%;
   }
 }
+=======
+>>>>>>> parent of e1503ed (Implementacao de animacoes nos textos e cards)
