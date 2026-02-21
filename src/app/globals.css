@@ -18,12 +18,9 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
 @layer utilities {
@@ -31,7 +28,6 @@ body {
     text-wrap: balance;
   }
 }
-<<<<<<< HEAD
 
 @layer base {
   :root {
@@ -105,5 +101,3 @@ body {
     --chart-5: 340 75% 55%;
   }
 }
-=======
->>>>>>> parent of e1503ed (Implementacao de animacoes nos textos e cards)
