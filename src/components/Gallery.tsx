@@ -4,27 +4,27 @@ import { motion } from "framer-motion";
 
 const galleryImages = [
     {
-        src: "/images/gallery/Acabamento.jpg",
+        src: "/images/Acabamento.webp",
         alt: "Acabamento Premium em Madeira",
         position: "50% 58%" // Centralizado
     },
     {
-        src: "/images/gallery/LateralPreto.png",
+        src: "/images/LateralPreto.webp",
         alt: "Edição Black Off-Road",
         position: "50% 85%" // Centralizado
     },
     {
-        src: "/images/gallery/LateralDois.png",
+        src: "/images/LateralDois.webp",
         alt: "Design Lateral Aerodinâmico",
         position: "center"
     },
     {
-        src: "/images/gallery/Cozinha.jpeg",
+        src: "/images/Cozinha.webp",
         alt: "Cozinha Completa e Equipada",
         position: "50% 60%"
     },
     {
-        src: "/images/gallery/LateralMenor.png",
+        src: "/images/LateralMenor.webp",
         alt: "Compacto e Robusto",
         position: "center"
     }

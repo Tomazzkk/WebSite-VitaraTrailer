@@ -52,7 +52,7 @@ export default function EntranceAnimation() {
                         className="w-64 h-64 md:w-80 md:h-80"
                     >
                         <img
-                            src="/images/LogosSemFundo.png"
+                            src="/images/LogosSemFundo.webp"
                             alt="Vitara Trailers"
                             className="w-full h-full object-contain"
                         />

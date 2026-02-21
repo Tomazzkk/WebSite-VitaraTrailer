@@ -44,7 +44,7 @@ export default function Configurator() {
         const message = `Olá! Gostaria de uma cotação para o *${selectedModel.name}* com os seguintes opcionais: ${accessoryNames || "Nenhum opcional"
             }. Valor estimado no site: R$ ${totalPrice.toLocaleString("pt-BR")}`;
 
-        const url = `https://wa.me/5511999999999?text=${encodeURIComponent(message)}`;
+        const url = `https://wa.me/554784351503?text=${encodeURIComponent(message)}`;
         window.open(url, "_blank");
     };
 
@@ -81,8 +81,8 @@ export default function Configurator() {
                                         key={model.id}
                                         onClick={() => setSelectedModel(model)}
                                         className={`cursor-pointer rounded-2xl p-6 border-2 transition-all duration-300 relative overflow-hidden ${selectedModel.id === model.id
-                                                ? "border-secondary bg-white/10"
-                                                : "border-white/10 hover:border-white/30 bg-transparent"
+                                            ? "border-secondary bg-white/10"
+                                            : "border-white/10 hover:border-white/30 bg-transparent"
                                             }`}
                                     >
                                         {selectedModel.id === model.id && (
@@ -112,8 +112,8 @@ export default function Configurator() {
                                         key={item.id}
                                         onClick={() => toggleAccessory(item.id)}
                                         className={`cursor-pointer rounded-xl p-4 border transition-all duration-200 flex items-center justify-between ${selectedAccessories.includes(item.id)
-                                                ? "border-secondary bg-secondary/10"
-                                                : "border-white/10 hover:bg-white/5"
+                                            ? "border-secondary bg-secondary/10"
+                                            : "border-white/10 hover:bg-white/5"
                                             }`}
                                     >
                                         <div className="flex items-center gap-3">

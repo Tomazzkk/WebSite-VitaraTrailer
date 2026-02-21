@@ -5,9 +5,9 @@ import { CheckCircle2 } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const carouselImages = [
-    "/images/gallery/LateralDois.png",
-    "/images/gallery/LateralPreto.png",
-    "/images/gallery/LateralMenor.png",
+    "/images/LateralDois.webp",
+    "/images/LateralPreto.webp",
+    "/images/LateralMenor.webp",
 ];
 
 const carouselVariants = {
@@ -84,7 +84,7 @@ export default function About() {
                         <div className="absolute inset-0 flex items-center justify-center z-20">
                             <div className="w-64 h-64 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center p-8 shadow-2xl border border-white/20">
                                 <img
-                                    src="/images/LogosSemFundo.png"
+                                    src="/images/LogosSemFundo.webp"
                                     alt="Vitara Trailers Logo"
                                     className="w-full h-full object-contain drop-shadow-lg"
                                 />
@@ -192,7 +192,7 @@ export default function About() {
                                 </div>
                                 <div>
                                     <strong className="block text-dark text-lg mb-1">Vitara Trailers</strong>
-                                    <span className="text-gray-500">Rua Osni Pereira - Medeiros<br />Barra Velha - SC, 89390-000</span>
+                                    <span className="text-gray-500">Rua Osni Pereira, 7<br />Barra Velha - SC, 88390-000</span>
                                 </div>
                             </div>
                         </motion.div>

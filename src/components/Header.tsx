@@ -37,7 +37,7 @@ export default function Header() {
                          but for now using the provided green logo. */}
                     <div className="relative w-40 h-20">
                         <img
-                            src="/images/LogosSemFundo.png"
+                            src="/images/LogosSemFundo.webp"
                             alt="Vitara Trailers"
                             className="object-contain w-full h-full"
                         />
@@ -60,7 +60,7 @@ export default function Header() {
                 {/* CTA Button */}
                 <div className="hidden md:block">
                     <Link
-                        href="https://wa.me/5511999999999" // Replace with actual number
+                        href="https://wa.me/554784351503" // Replace with actual number
                         className="flex items-center gap-2 px-5 py-2 border-2 border-secondary text-secondary rounded-full font-bold hover:bg-secondary hover:text-primary transition-all duration-300"
                     >
                         <Phone size={18} />
@@ -98,7 +98,7 @@ export default function Header() {
                                 </Link>
                             ))}
                             <Link
-                                href="https://wa.me/5511999999999"
+                                href="https://wa.me/554784351503"
                                 className="flex items-center gap-2 px-6 py-3 bg-secondary text-primary rounded-full font-bold w-full justify-center"
                             >
                                 <Phone size={20} />

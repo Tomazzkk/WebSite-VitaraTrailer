@@ -14,10 +14,10 @@ export default function Footer() {
                             Liberdade para ir mais longe. Trailers compactos, robustos e projetados para a sua aventura.
                         </p>
                         <div className="flex gap-4">
-                            <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-secondary hover:text-dark-accent transition-all duration-300">
+                            <a href="https://www.instagram.com/vitara_trailer/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-secondary hover:text-dark-accent transition-all duration-300">
                                 <Instagram size={18} />
                             </a>
-                            <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-secondary hover:text-dark-accent transition-all duration-300">
+                            <a href="https://www.facebook.com/vitaratrailer" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-secondary hover:text-dark-accent transition-all duration-300">
                                 <Facebook size={18} />
                             </a>
                         </div>
@@ -50,15 +50,15 @@ export default function Footer() {
                         <ul className="space-y-4 text-sm text-gray-400">
                             <li className="flex items-start gap-3">
                                 <MapPin size={18} className="text-secondary shrink-0 mt-0.5" />
-                                <span>Rua da Aventura, 123<br />São Paulo - SP</span>
+                                <span>Rua Osni Pereira, 7<br />Barra Velha - SC</span>
                             </li>
                             <li className="flex items-center gap-3">
                                 <Phone size={18} className="text-secondary shrink-0" />
-                                <span>(11) 99999-9999</span>
+                                <span>(47) 8435-1503</span>
                             </li>
                             <li className="flex items-center gap-3">
                                 <Mail size={18} className="text-secondary shrink-0" />
-                                <span>contato@vitaratrailers.com.br</span>
+                                <span>vitaratrailers@gmail.com</span>
                             </li>
                         </ul>
                     </div>

@@ -11,7 +11,7 @@ const products = [
         id: "family",
         name: "Vitara Família",
         price: "R$ 45.900",
-        image: "/images/TrailerFamilia.png",
+        image: "/images/TrailerFamilia.webp",
         specs: [
             { icon: <Weight size={18} />, label: "750kg", text: "Espaço otimizado" },
             { icon: <Bed size={18} />, label: "4 Pessoas", text: "Família completa" },
@@ -23,7 +23,7 @@ const products = [
         id: "classic",
         name: "Vitara Classic",
         price: "R$ 35.900",
-        image: "/images/LateralPreto.png",
+        image: "/images/LateralPreto.webp",
 
         specs: [
             { icon: <Weight size={18} />, label: "480kg", text: "Leve para rebocar" },
@@ -31,6 +31,18 @@ const products = [
             { icon: <Ruler size={18} />, label: "3.2m", text: "Compacto e Ágil" },
         ],
         tag: "Mais Procurado",
+    },
+    {
+        id: "vitara2700",
+        name: "Vitara 2700",
+        price: "R$ 52.000",
+        image: "/images/Vitara2700.webp",
+        specs: [
+            { icon: <Weight size={18} />, label: "750kg", text: "Categoria B" },
+            { icon: <Bed size={18} />, label: "4 Pessoas", text: "Conforto sob medida" },
+            { icon: <Ruler size={18} />, label: "4.0m", text: "Espaço otimizado" },
+        ],
+        tag: "Lançamento",
     },
 ];
 
@@ -59,7 +71,7 @@ export default function Showroom() {
                 </Link>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-12">
+            <div className="grid lg:grid-cols-3 gap-8 xl:gap-12">
                 {products.map((product) => (
                     <SimpleTiltCard key={product.id} className="h-full">
                         <motion.div
