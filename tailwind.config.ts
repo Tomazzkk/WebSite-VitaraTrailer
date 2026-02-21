@@ -12,41 +12,41 @@ const config: Config = {
 		extend: {
 			colors: {
 				primary: {
-					DEFAULT: '#2D5A27', // Forest Green
-					foreground: '#F2F2F2' // Ice White
+					DEFAULT: 'hsl(var(--primary))',
+					foreground: 'hsl(var(--primary-foreground))'
 				},
 				secondary: {
-					DEFAULT: '#F2F2F2', // Ice White
-					foreground: '#2D5A27' // Forest Green
+					DEFAULT: 'hsl(var(--secondary))',
+					foreground: 'hsl(var(--secondary-foreground))'
 				},
 				surface: '#F2F2F2',
 				dark: '#1F2937',
 				'dark-accent': '#1B3617',
-				background: '#F2F2F2', // Default background
-				foreground: '#2D5A27', // Default text
+				background: 'hsl(var(--background))',
+				foreground: 'hsl(var(--foreground))',
 				card: {
-					DEFAULT: '#FFFFFF',
-					foreground: '#2D5A27'
+					DEFAULT: 'hsl(var(--card))',
+					foreground: 'hsl(var(--card-foreground))'
 				},
 				popover: {
-					DEFAULT: '#FFFFFF',
-					foreground: '#2D5A27'
+					DEFAULT: 'hsl(var(--popover))',
+					foreground: 'hsl(var(--popover-foreground))'
 				},
 				muted: {
-					DEFAULT: '#F3F4F6',
-					foreground: '#1B3617'
+					DEFAULT: 'hsl(var(--muted))',
+					foreground: 'hsl(var(--muted-foreground))'
 				},
 				accent: {
-					DEFAULT: '#E9A426', // Mustard Yellow
-					foreground: '#2D5A27'
+					DEFAULT: 'hsl(var(--accent))',
+					foreground: 'hsl(var(--accent-foreground))'
 				},
 				destructive: {
-					DEFAULT: '#ef4444',
-					foreground: '#F2F2F2'
+					DEFAULT: 'hsl(var(--destructive))',
+					foreground: 'hsl(var(--destructive-foreground))'
 				},
-				border: '#2D5A27', // Forest Green
-				input: '#2D5A27',
-				ring: '#2D5A27',
+				border: 'hsl(var(--border))',
+				input: 'hsl(var(--input))',
+				ring: 'hsl(var(--ring))',
 				chart: {
 					'1': 'hsl(var(--chart-1))',
 					'2': 'hsl(var(--chart-2))',
